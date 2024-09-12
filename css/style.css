@@ -1,0 +1,194 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+/*start of nav style */
+.nav-link{
+    position: relative;
+    margin-left: 10px;
+    margin-right:20px;
+}
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+height: 1px;
+background-color: #040000;
+bottom: 0;
+left: 0;
+transition: width 1s;
+}
+
+li .active:after{
+   
+    width: 100%;
+}
+/*end of nav style */
+/* start of home style  */
+.home-section {
+    background-image: url('../imgs/bg.jpg');
+    background-size: cover;
+
+}
+
+.home-section h1 {
+    font-size: 4.5rem;
+}
+/* end of home style  */
+/* start of about style  */
+#about .subtitle , #portfolio .card-title{
+    letter-spacing: 2px;
+}
+
+#about .about-image{
+position: relative;
+
+}
+#about .about-image::before{
+    content: "";
+        background-image: url(../imgs/dots.png);
+            background-repeat: repeat;
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 25%;
+            left: -25px;
+            z-index: -1;
+}
+/* end of about style  */
+/* start of services style  */
+.title h3
+{
+position: relative;
+z-index: 1;
+}
+
+
+.title h3::after
+ {
+content: "";
+    width:70%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left:15%;
+    z-index:-1;
+}
+
+.icon span {
+    transition: all 500ms ease;
+    background: #ecebeb
+}
+
+#contact .icon:hover span , #services .item:hover .icon span , #ourteam .icon span , #about .contact:hover {
+     background-color: #000000;
+     color: #fff;
+ }
+
+#portfolio .card-img-overlay{
+    top: 15px;
+    transition: all 0.7s;
+    opacity: 0;
+}
+#portfolio .card-title{
+    margin-bottom: 30%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+#portfolio .card-img-overlay:hover{
+   transform: translateY(-8px);
+   opacity: 0.9;
+}
+
+#portfolio .card-img-overlay:hover .card-title{
+  margin-bottom:20%;
+  opacity: 1;
+}
+
+#portfolio .icons i{
+color: #fff;
+}
+
+#portfolio .icons span ,#ourteam a{
+color: #fff;
+background-color: #000000;
+}
+
+#portfolio .icons span:hover , #ourteam span:hover , #about .download:hover,#ourteam a:hover {
+background-color: #fff;
+color: #000000;
+border: 1px solid #000000;  
+}
+
+#portfolio .icons span:hover i{
+color: #000000;
+}
+
+#clients  .author-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;}
+    
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #343434;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link{
+    background-color: white;
+}
+
+#ourteam .card{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+#ourteam .overlay{
+  width: 50%;
+  height: 50%;
+    top: 20%;
+    left:25%;
+    transition: all 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+}
+
+#ourteam .card:hover .overlay{
+  width: 90%;
+  height: 70%;
+    top: 20px;
+    left:20px;
+    transform: rotateY(360deg) scale(1, 1);
+    opacity: 1;
+}
+
+
+#ourteam .transition img{
+transition:all 0.5s;
+}
+
+#ourteam .transition:hover img{
+transform: scale(1.15);
+}
+
+
+
+
+textarea{
+    resize: horizontal;
+    max-width: 100%;
+}
+
+
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+}
